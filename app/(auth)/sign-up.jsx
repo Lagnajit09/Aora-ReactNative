@@ -9,6 +9,7 @@ import { Link, router } from "expo-router";
 import { createUser } from "../../lib/appwrite";
 
 const SignUp = () => {
+  const { setUser, setIsLoggedIn } = useGlobalContext();
   const [form, setForm] = useState({
     username: "",
     email: "",
@@ -29,7 +30,8 @@ const SignUp = () => {
         form.password,
         form.username
       );
-      //set to global state
+      setUser(newUser);
+      setIsLoggedIn(true);
       router.replace("/home");
     } catch (error) {
       return Alert.alert("Error", error.message);
