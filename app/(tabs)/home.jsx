@@ -49,7 +49,7 @@ const Home = () => {
                 />
               </View>
             </View>
-            <SearchInput />
+            <SearchInput placeholder="Search for a video..." />
 
             <View className="w-full flex-1 pt-5 pb-8">
               <Text className="text-gray-100 text-lg font-pregular mb-3">
@@ -64,6 +64,8 @@ const Home = () => {
           <EmptyState
             title="No Videos Found"
             subtitle="Be the first one to upload a video"
+            buttonTitle="Create Video"
+            routeTo="/create"
           />
         )}
         refreshControl={

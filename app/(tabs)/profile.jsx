@@ -69,6 +69,8 @@ const Profile = () => {
           <EmptyState
             title="No Results Found"
             subtitle="No videos available for this search."
+            buttonTitle="Explore Videos"
+            routeTo="/home"
           />
         )}
       />

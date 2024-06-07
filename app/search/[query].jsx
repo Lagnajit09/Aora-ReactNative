@@ -37,6 +37,8 @@ const Search = () => {
           <EmptyState
             title="No Results Found"
             subtitle="No videos available for this search."
+            buttonTitle="Create Video"
+            routeTo="/create"
           />
         )}
       />
